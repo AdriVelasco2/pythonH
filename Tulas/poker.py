@@ -27,3 +27,5 @@ if contador==4:
 else:
     print("Te has arruinado")
 print(poker)
+
+# De nuevo, no es la forma más eficiente de hacerlo, pero sí la que se me ha ocurrido sin recurrir a una IA
