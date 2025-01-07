@@ -1,5 +1,5 @@
-palos=["Corazones", "Picas", "Diamantes", "Trébol"]
-cartas=["As","2", "3", "4", "5", "6", "7", "8","9","10","J","Q","K" ]
+palos=("Corazones", "Picas", "Diamantes", "Trébol")
+cartas=("As","2", "3", "4", "5", "6", "7", "8","9","10","J","Q","K" )
 
 # for valor, palo in zip(cartas, palos):
 #     print(valor, palo)
