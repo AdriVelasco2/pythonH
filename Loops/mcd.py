@@ -1,4 +1,4 @@
-# Menos mal que mi novia es profe de mates para ayudarme a entender como hallar el mcd
+# Menos mal que mi novia es profe de mates para ayudarme a entender el algoritmo euclidiano.
 def mcd_euclidiano(a,b):
     
   if b==0:
