@@ -16,3 +16,10 @@ try:
 
 finally:
     print("fin")
+    
+    # ESTE CÓDIGO ES EL PRIMERO QUE INTENTÉ, SI PASO LA RUTA, DA IGUAL AL NIVEL AL QUE ESTÉ EL ARCHIVO
+    # nUNCA LLEGA A COGERLO NI A LEERLO
+    # PROBÉ DE MÁS MANERAS PERO SI NO IMPORTO LO DE OS Y DEFINO LA RUTA DINÁMICAMENTE COMO ARRIBA, NO LO COGE NUNCA
+# with open('data/leeme.txt', 'r') as lineas:
+#     for linea in lineas:
+#         print(linea)
