@@ -1,5 +1,5 @@
 
-def testVocal(caracter):
+def is_vowel(caracter):
     vocales= 'aeiou'
     valor= False
     for letra in vocales:
@@ -9,4 +9,4 @@ def testVocal(caracter):
     if not valor:
         print("No es vocal")
 caracter = str(input("Introduce una letra: "))
-testVocal(caracter)
+is_vowel(caracter)
