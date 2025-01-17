@@ -6,23 +6,23 @@ conexion= connect_bd("PythonHiberus")
 def sacarcursos(nombrecategoria):
     try:
         cursor= conexion.cursor()
-        sqlquerycur=('''
-                  SELECT nombre FROM Cursos WHERE nombre = ?;
+        sqlquerycat=('''
+                  SELECT id FROM Categorias WHERE nombre = ?;
                   
                 ''' )
-        cursor.execute(sqlquerycur,(nombrecategoria,))
+        cursor.execute(sqlquerycat,(nombrecategoria,))
         categoria= cursor.fetchall()
         catid=categoria[0][0]
-        sqlquerycat=('''
+        sqlquerycur=('''
                   SELECT nombre FROM Cursos WHERE categoria_id = ?;
                   
                 ''' )
-        cursor.execute(sqlquerycat,(nombrecategoria,catid))
+        cursor.execute(sqlquerycur,(catid,))
         cursos=cursor.fetchall()
-        conexion.commit()
+        
+        
         for curso in cursos:
-            print (curso[0])
-       
+          print(curso[0])
         
     except sqlite3.Error as e:
         print(f"Error: {e}")

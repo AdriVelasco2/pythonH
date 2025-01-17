@@ -85,3 +85,4 @@ miConexion.commit()
 # AHORA VOY A DARLE A LAS TIENDAS UNA SECCIÓN
 
 miConexion.close()
+

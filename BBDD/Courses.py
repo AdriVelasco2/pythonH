@@ -26,4 +26,4 @@ def insertcurso(nombrecurso,nombrecategoria):
     except sqlite3.Error as e:
         print(f"Error: {e}")
         
-insertcurso("Javascript", "Difícil")
+insertcurso("Javascript", "Patata")
