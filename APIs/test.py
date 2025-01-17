@@ -1,4 +1,7 @@
 import requests
+
+# IGNORAR ESTE ARCHIVO, ES UNA CAJA DE SASTRE
+
 if __name__ =='__main__':
     url= 'https://www.google.es/'
     response=  requests.get(url)
@@ -6,4 +9,8 @@ if __name__ =='__main__':
     print(response)
     
     if response.status_code==200:
-        print(response.content)
+        # print(response.content)
+        content= response.content
+        file=open('google.html','wb')
+        file.write(content)
+        file.close()
