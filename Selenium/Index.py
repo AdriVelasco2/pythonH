@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.service import Service
 import inquirer
 import Sauce
-import Google
+import google
 import SauceXpath
 
 def mostrar_menu():

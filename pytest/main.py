@@ -1,4 +1,5 @@
 def prueba(num1,num2):
     return num1 + num2
 
-assert prueba(2,3)==5 
+def mayor_que(num1,num2):
+    return num1>num2
