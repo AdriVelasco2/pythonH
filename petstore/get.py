@@ -89,19 +89,27 @@ def get_pet_user(user):
     url = f"https://petstore.swagger.io/v2/user/{user}"
     try:
         response = requests.get(url)
-         
+        
         user=response.json()
         if not user:
             print(f"user not founds with the username:  '{user}'.")
             return
         print("User:")
         print(user)
+        print(response.status_code)
         
     except requests.exceptions.HTTPError as e:
         if response.status_code==404:
             print("Status not found, response code: 404")
             
-# get_pet_user('string')
+
+
+def test_get_pet_user_status_code():
+    user = "string" 
+    response = get_pet_user(user)
+    assert response.status_code == 200
+
+
 
 def get_login(username,password):
     url = f"https://petstore.swagger.io/v2/user/login?username={username}&password={password}"
