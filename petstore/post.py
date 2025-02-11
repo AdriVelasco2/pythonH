@@ -61,7 +61,6 @@ def create_pet(pet_id, name, status):
 def update_pet_form_data(pet_id, name, status):
     url = f"https://petstore.swagger.io/v2/pet/{pet_id}"
    
-    # Datos de la mascota en formato form-data
     data = {
         "name": name,
         "status": status
@@ -71,7 +70,6 @@ def update_pet_form_data(pet_id, name, status):
         response = requests.post(url, data=data)
         response.raise_for_status()
         
-        # Mostrar la respuesta del servidor
         updated_pet = response.json()
         print("Successfull creation of pet: ")
         print(updated_pet)
@@ -125,7 +123,6 @@ def create_users(users_list):
         response = requests.post(url, headers=headers, data=json.dumps(users_list))
         response.raise_for_status()
         
-        # Mostrar la respuesta del servidor
         print("Usuarios creados con éxito.")
         print(f"Código de respuesta: {response.status_code}")
     
@@ -162,7 +159,6 @@ def create_users_array(users_array):
         response = requests.post(url, headers=headers, data=json.dumps(users_array))
         response.raise_for_status()
         
-        # Mostrar la respuesta del servidor
         print("Usuarios creados con éxito.")
         print(f"Código de respuesta: {response.status_code}")
     
@@ -187,7 +183,6 @@ def create_user(user):
         response = requests.post(url, headers=headers, data=json.dumps(user))
         response.raise_for_status()
         
-        # Mostrar la respuesta del servidor
         print("Usuarios creados con éxito.")
         print(f"Código de respuesta: {response.status_code}")
     
