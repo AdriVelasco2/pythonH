@@ -1,17 +1,30 @@
 import pytest
+import sys
+sys.path.append('..')
 from stuff.accum import Accumulator
 
-def test_accumulator_init():
-    accum = Accumulator()
+@pytest.fixture
+def accum():
+  return Accumulator()
+  
+
+def test_accumulator_init(accum):
     assert accum.count==0
-    
-def test_accumulator_one():
-    accum= Accumulator()
-    accum.add()
-    assert accum.count ==1
-    
-def test_accumulator_two():
-    accum= Accumulator
-    accum.add(3)
-    assert accum.count==3
+
+def test_accumulator_add_one(accum):
+  accum.add()
+  assert accum.count == 1
+
+def test_accumulator_add_three(accum):
+  accum.add(3)
+  assert accum.count == 3
+
+def test_accumulator_add_twice(accum):
+  accum.add()
+  accum.add()
+  assert accum.count == 2
+
+def test_accumulator_cannot_set_count_directly():
+  with pytest.raises(AttributeError, match=r"property 'count' of 'Accumulator' object has no setter") as e:
+    accum.count = 10
     
