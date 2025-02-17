@@ -1,5 +1,4 @@
-import pytest
-from stuff.accum import Accumulator
+from pytesting.stuff.accum import Accumulator
 
 def test_accumulator_init():
     accum = Accumulator()
@@ -11,7 +10,6 @@ def test_accumulator_one():
     assert accum.count ==1
     
 def test_accumulator_two():
-    accum= Accumulator
+    accum= Accumulator()
     accum.add(3)
     assert accum.count==3
-    
