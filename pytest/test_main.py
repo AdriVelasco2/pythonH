@@ -6,8 +6,8 @@ def test_prueba():
 
 @pytest.mark.parametrize(
     [
-        (5,1,6),
-        (6, sum(4,2),12)
+        (5,1),
+        (6, 7)
         
     ]
 )

@@ -1,8 +1,4 @@
-"""
-This module contains a simple class modeling a cucumber basket.
-Cucumbers may be added or removed from the basket.
-The basket has a maximum size, however.
-"""
+
 
 class CucumberBasket:
 
